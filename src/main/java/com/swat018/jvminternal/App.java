@@ -15,7 +15,13 @@ public class App {
     public static void main(String[] args) {
 //        System.out.println(App.class.getClassLoader());
 //        System.out.println(List.class.getClassLoader());
+/*
         Thread.currentThread();
         System.out.println(App.class.getSuperclass());
+*/
+        ClassLoader classLoader = App.class.getClassLoader();
+        System.out.println(classLoader);
+        System.out.println(classLoader.getParent());
+        System.out.println(classLoader.getParent().getParent());
     }
 }
